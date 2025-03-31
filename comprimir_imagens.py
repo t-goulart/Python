@@ -1,3 +1,6 @@
+# Cria uma copia comprimida das imagens de uma pasta e transferem para outra pasta
+# Comprime imagens '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff' e '.webp'
+
 from PIL import Image  # Importa a biblioteca PIL (Pillow) para manipulação de imagens
 import os  # Importa o módulo os para interagir com o sistema operacional (arquivos e pastas)
 
