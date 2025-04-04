@@ -1,9 +1,19 @@
-# Move arquivos para uma pasta superior de acordo com o nível informado
-# Sobre os níveis consideramos como nível 1 a pasta raiz e assim sucessivamente
-# Exemplo: \\Simp20019\integracao_bi_dp$\Automation\_Teste
-# Considere _Teste como nivel_superior 1
-# A proxima dentro deste link seria: \\Simp20019\integracao_bi_dp$\Automation\_Teste\213897
-# Logo considere 213897 como nivel_superior = 2, então todos os arquivos dentro das suas subpastas seriam movimentados para a pasta 213897 (nivel 2)
+'''
+Move arquivos para uma pasta superior de acordo com o nível informado
+Sobre os níveis consideramos como nível 1 a pasta raiz e assim sucessivamente
+Exemplo: 
+Vamos usar um link como exemplo
+
+D:\Empresa\Departamento Pessoal\Funcionarios\Prontuario\
+
+A pasta do link sera considerada como nivel_superior 1, consequentemente cada pasta sera o proximo nivel.
+Vamos supor que dentro de Prontuario temos a pasta '100000' (D:\Empresa\Departamento Pessoal\Funcionarios\Prontuario\100000), dentro desta pasta temos 7 subpastas, cada uma com diversos arquivos e documentos.
+Se quiser transferir tudo para a pasta '100000', será necessário informar o nivel da pasta que precisa receber todos os arquivos dentro dela
+
+caminho_raiz = r"D:\Empresa\Departamento Pessoal\Funcionarios\Prontuario\" # informe a pasta raiz
+nivel_superior = 2 # informe o nivel | Prontuario seria nivel 1, então 100000 será nivel 2 | Logo tudo que está nas subpastas de 100000 será movido para essa pasta
+mover_arquivos_para_nivel_superior(caminho_raiz, nivel_superior)
+'''
 
 import os  # Importa o módulo 'os' para interagir com o sistema operacional (lidar com arquivos, pastas, etc.)
 import shutil  # Importa o módulo 'shutil' para operações de movimentação de arquivos
@@ -63,7 +73,6 @@ def mover_arquivos_para_nivel_superior(caminho_raiz, nivel_superior):
                     print(f"Erro ao mover arquivo {caminho_origem}: {e}")
 
 # Exemplo de uso
-caminho_raiz = r"\\simp20019\dados\SIMPRESS\RH\Adm. Pessoal\IRON\Automação\2024"
-#caminho_raiz = r"\\Simp20019\integracao_bi_dp$\Automation\_Teste"
-nivel_superior = 3
+caminho_raiz = r""
+nivel_superior = 2
 mover_arquivos_para_nivel_superior(caminho_raiz, nivel_superior)
