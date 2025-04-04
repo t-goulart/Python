@@ -1,3 +1,11 @@
+'''
+É uma solução eficiente para comprimir arquivos PDF utilizando o programa Ghostscript, uma poderosa ferramenta de linha de comando. 
+O código define a função , que invoca o executável do Ghostscript para realizar a compressão com parâmetros específicos, como compatibilidade com o padrão PDF 1.4 e configurações otimizadas para ebooks. 
+A função  aplica essa compressão a todos os arquivos PDF em uma pasta e suas subpastas, com a opção de renomear os arquivos originais ou salvar os comprimidos em um diretório separado. 
+A utilização de módulos como  para manipular diretórios e arquivos, e  para executar comandos externos, torna o script flexível e funcional para gerenciar e comprimir PDFs em larga escala. 
+Se configurado corretamente com os caminhos adequados, ele pode ser usado para tarefas automatizadas de redução do tamanho de PDFs.
+'''
+
 import os  # Importa o módulo 'os' para interagir com o sistema operacional (lidar com arquivos, pastas, etc.)
 import subprocess  # Importa o módulo 'subprocess' para executar comandos do sistema operacional
 
@@ -54,7 +62,7 @@ def comprimir_pdfs_pasta(pasta_entrada, pasta_saida, renomear=False):
                     comprimir_pdf_ghostscript(caminho_entrada, caminho_saida)
 
 # Exemplo de uso
-pasta_entrada = r"\\simp20019\dados\SIMPRESS\RH\Adm. Pessoal\IRON\Automação\2025"  # Pasta de entrada
-pasta_saida = r"\\simp20019\dados\SIMPRESS\RH\Adm. Pessoal\IRON\Automação\2025"  # Pasta de saída
+pasta_entrada = r""  # Pasta de entrada | Onde os PDFs estão
+pasta_saida = r""  # Pasta de saída | Onde os PDFs comprimidos devem ser salvos
 
 comprimir_pdfs_pasta(pasta_entrada, pasta_saida, renomear=True)  # Chama a função para comprimir os PDFs
