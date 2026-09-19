@@ -81,10 +81,10 @@ Pontos de atenção:
 # ==========================================
 # CONFIGURAÇÕES DE CAMINHOS
 # ==========================================
-varPastaOrigem = r"\\simp20019\dados\SIMPRESS\RH\Remuneração e Beneficios\Núcleo de Inteligência\Projeto PBI\Paineis em Power BI\Painéis em Produção"  # Pasta onde ficam os painéis em produção
-varPastaDestinoTxt = r"\\Simp20019\integracao_bi_dp$\Automation\People_Analytics\Base_Mapeamento_Estrutura_Paineis\Arquivos"  # Pasta onde cada relatório .txt individual é salvo
-varPastaDestinoExcel = r"\\Simp20019\integracao_bi_dp$\Template_HR"  # Pasta onde fica a base Excel de histórico de mapeamento
-varCaminhoExcel = os.path.join(varPastaDestinoExcel, "Base Mapeamento da Estrutura dos Paineis.xlsx")  # Caminho completo do arquivo Excel de histórico
+varPastaOrigem = r""  # Pasta onde ficam os painéis em produção
+varPastaDestinoTxt = r""  # Pasta onde cada relatório .txt individual é salvo
+varPastaDestinoExcel = r""  # Pasta onde fica a base Excel de histórico de mapeamento
+varCaminhoExcel = os.path.join(varPastaDestinoExcel, "Nome do Arquivo de Monitoramento.xlsx")  # Caminho completo do arquivo Excel de histórico
 
 
 def extrairPaginasDoLayout(varCaminhoPbix):
