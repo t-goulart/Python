@@ -84,7 +84,7 @@ Pontos de atenção:
 varPastaOrigem = r""  # Pasta onde ficam os painéis em produção
 varPastaDestinoTxt = r""  # Pasta onde cada relatório .txt individual é salvo
 varPastaDestinoExcel = r""  # Pasta onde fica a base Excel de histórico de mapeamento
-varCaminhoExcel = os.path.join(varPastaDestinoExcel, "Nome do Arquivo de Monitoramento.xlsx")  # Caminho completo do arquivo Excel de histórico
+varCaminhoExcel = os.path.join(varPastaDestinoExcel, "Mapeamento da Estrutura dos PBIs.xlsx")  # Caminho completo do arquivo Excel de histórico
 
 
 def extrairPaginasDoLayout(varCaminhoPbix):
